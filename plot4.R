@@ -1,4 +1,13 @@
-data=read.csv2("household_power_consumption.txt",header=TRUE,colClasses="character",na.string="?")
+#This R script read in the household_poower_consumption.txt csv file and generated 4 graphs in
+#one image. The four graphs are:
+#1. Line plot of Global Active Power (kilowatts) variable VS datetime
+#2. Line plot of Voltage variable VS datetime
+#3. Global Active Power (kilowatts) variable VS datetime for the submeter 1 to 3
+#4. Line plot of Global Reactive Power (kilowatts) variable VS datetime
+#A png file of the graph would be generated in /figure directory
+
+
+data=read.csv2("../household_power_consumption.txt",header=TRUE,colClasses="character",na.string="?")
 data[,"Date"]<-as.Date(data[,"Date"],"%d/%m/%Y")
 startdate<-as.Date("01/02/2007","%d/%m/%Y")
 enddate<-as.Date("02/02/2007","%d/%m/%Y")
