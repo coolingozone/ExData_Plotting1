@@ -2,6 +2,9 @@
 #of the Global Active Power (kilowatts) variable VS datetime for the submeter 1 to 3
 #A png file of the graph would be generated in /figure directory
 
+#This R script read in the household_poower_consumption.txt csv file and plot the histogram 
+#of the Global Active Power (kilowatts) variable
+#A png file of the histogram would be generated in /figure directory
 
 data=read.csv2("../household_power_consumption.txt",header=TRUE,colClasses="character",na.string="?")
 data[,"Date"]<-as.Date(data[,"Date"],"%d/%m/%Y")
